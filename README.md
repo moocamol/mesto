@@ -7,6 +7,6 @@
 
 **Ссылка на макет в GitHub Pages**
 
-* [Ссылка]()
+* [Ссылка](https://moocamol.github.io/mesto/)
 
 
