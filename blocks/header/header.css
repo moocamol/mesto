@@ -1,0 +1,19 @@
+.header { 
+    display: flex; 
+    max-width: 880px; 
+    width: 93%; 
+    min-height: 74px; 
+    padding-top: 45px;
+    border-bottom: .1rem solid #545454;
+    /* opacity: .7; */
+} 
+ 
+@media (max-width: 880px) { 
+    .header { 
+        padding-top: 28px;
+        padding-bottom: 31px;
+        min-height: 20px;
+        width: 100%;
+    } 
+} 
+ 

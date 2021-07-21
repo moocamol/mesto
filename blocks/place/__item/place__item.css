@@ -1,0 +1,9 @@
+.place__item {
+    border-radius: 10px;
+    background-color: white;
+    max-width: 282px;
+    max-height: 361px;
+    margin: 0;
+    padding-left: 0;
+    overflow: hidden;
+}

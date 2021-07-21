@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+ 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="stylesheet" href="./pages/index.css"> 
+  <title>Mesto Russia</title> 
+</head> 
+ 
+<body class="page"> 
+  <header class="header"> 
+    <a href="#" class="header__logo"></a> 
+  </header>
+  
+  <main class="content"> 
+      <section class="profile">
+          <img class="profile__avatar" src="./images/image.jpg" alt="Фото">
+          <div class="profile__info">
+              <h1 class="profile__name">Жак-Ив Кусто</h1>
+              <button class="button button__edit"></button>
+              <p class="profile__profession">Исследователь океана</p>
+         </div>
+          <button class="button button__add">
+            <img src="./images/add.svg" alt="Плюс">
+          </button>         
+      </section>
+
+      <section class="places"> 
+        <ul class="place"> 
+          <li class="place__item"> 
+            <img src="./images/Karachaevsk.jpg" class="place__image" alt="Карачаевск"> 
+            <div class="place__content">
+                <p class="place__title">Карачаевск</p>
+               <a href="#"><img src="./images/Like.svg" class="place__like" alt="Лайк"></a>
+            </div>            
+          </li>
+          <li class="place__item"> 
+            <img src="./images/Elbrus.jpg" class="place__image" alt="Эльбрус"> 
+            <div class="place__content">
+                <p class="place__title">Гора Эльбрус</p>
+               <a href="#"><img src="./images/Like.svg" class="place__like" alt="Лайк"></a>
+            </div>            
+          </li>
+          <li class="place__item"> 
+            <img src="./images/Dombay.jpg" class="place__image" alt="Домбай"> 
+            <div class="place__content">
+                <p class="place__title">Домбай</p>
+               <a href="#"><img src="./images/Like.svg" class="place__like" alt="Лайк"></a>
+            </div>            
+          </li>
+          <li class="place__item"> 
+            <img src="./images/Karachaevsk.jpg" class="place__image" alt="Карачаевск"> 
+            <div class="place__content">
+                <p class="place__title">Карачаево-Черкессия</p>
+               <a href="#"><img src="./images/Like.svg" class="place__like" alt="Лайк"></a>
+            </div>            
+          </li>
+          <li class="place__item"> 
+            <img src="./images/Elbrus.jpg" class="place__image" alt="Эльбрус"> 
+            <div class="place__content">
+                <p class="place__title">Гора Эльбрус</p>
+               <a href="#"><img src="./images/Like.svg" class="place__like" alt="Лайк"></a>
+            </div>            
+          </li>
+          <li class="place__item"> 
+            <img src="./images/Dombay.jpg" class="place__image" alt="Домбай"> 
+            <div class="place__content">
+                <p class="place__title">Домбай</p>
+               <a href="#"><img src="./images/Like.svg" class="place__like" alt="Лайк"></a>
+            </div>            
+          </li>
+        </ul>                 
+      </section>
+  </main>
+
+  <footer class="footer"> 
+     <p class="footer__copyright">&copy; 2020 Mesto Russia</p> 
+  </footer>
+
+  <div class="popup">
+    <div class="popup__content">
+      <button type="button" class="popup__close"></button>
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form class="popup__input-container">
+         <input type="text" class="popup__input-item"  placeholder="name">
+         <input type="text" class="popup__input-item" placeholder="profession">
+         <button class="button popup__save">Сохранить</button>
+      </form>            
+    </div>
+  </div>
+   <script src="./scripts/index.js"></script>
+</body> 
+ 
+</html> 

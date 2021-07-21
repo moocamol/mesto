@@ -1,0 +1,17 @@
+.button__add {
+    width: 148px;
+    height: 47px;
+    position: absolute;
+    right: 0;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    padding: 1px;
+}
+
+@media (max-width: 880px) { 
+    .button__add { 
+        width: 282px;
+        position: relative;
+        top: 23px;
+    } 
+} 

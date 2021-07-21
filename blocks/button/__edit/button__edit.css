@@ -1,0 +1,17 @@
+.button__edit {
+   width: 23px;
+   height: 23px;
+   border: 1px solid #FFFFFF;
+   margin: 0 0 10px 19px;
+   background-image: url(../../../images/Pen.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+@media (max-width: 880px) { 
+   .button__edit { 
+      margin: 0 0 7px 11px;
+      width: 17px;
+      height: 17px;
+   } 
+} 

@@ -1,0 +1,18 @@
+.popup__save {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+    width: 80%;
+    min-height: 50px;
+    margin: 48px auto 37px;
+    border: 2px solid black;
+}
+
+@media (max-width: 880px) { 
+    .popup__save { 
+        margin: 45px auto 25px;
+        font-size: 14px;
+        line-height: 17px;
+    } 
+}

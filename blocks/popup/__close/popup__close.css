@@ -1,0 +1,22 @@
+.popup__close {
+    background-image: url(../../../images/Close\ Icon.svg);
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: -43px;
+    right: -43px;
+    border: none;
+}
+
+@media (max-width: 880px) { 
+    .popup__close { 
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: -39px;
+        right: 0;
+    } 
+}
