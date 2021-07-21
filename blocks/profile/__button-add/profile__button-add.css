@@ -1,4 +1,4 @@
-.button__add {
+.profile__button-add {
     width: 148px;
     height: 47px;
     position: absolute;
@@ -9,7 +9,7 @@
 }
 
 @media (max-width: 880px) { 
-    .button__add { 
+    .profile__button-add { 
         width: 282px;
         position: relative;
         top: 23px;
