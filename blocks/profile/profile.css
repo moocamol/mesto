@@ -1,15 +1,15 @@
 .profile { 
-    position: relative; 
-    display: flex; 
+    position: relative;
+    display: flex;
     align-items: center;
-    max-width: 880px; 
-    width: 100%; 
-    min-height: 120px; 
-    margin-top: 38px; 
+    max-width: 880px;
+    width: 100%;
+    min-height: 120px;
+    margin-top: 38px;
 } 
  
-@media (max-width: 880px) { 
-    .profile { 
+@media (max-width: 880px) {
+    .profile {
         flex-direction: column;
     } 
 } 
