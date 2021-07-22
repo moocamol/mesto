@@ -3,16 +3,18 @@
     font-size: 18px;
     line-height: 22px;
     color: white;
-    width: 80%;
+    width: 83%;
     min-height: 50px;
     margin: 48px auto 37px;
     border: 2px solid black;
 }
 
-@media (max-width: 880px) { 
+@media (max-width: 790px) { 
     .popup__save { 
-        margin: 45px auto 25px;
+        margin: 44px auto;
         font-size: 14px;
         line-height: 17px;
+        width: 85%;
+        min-height: 46px;
     } 
 }

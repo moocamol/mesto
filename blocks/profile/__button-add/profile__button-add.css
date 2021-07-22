@@ -1,17 +1,15 @@
 .profile__button-add {
     width: 148px;
     height: 47px;
-    position: absolute;
-    right: 0;
     border: 2px solid #FFFFFF;
-    box-sizing: border-box;
-    padding: 1px;
+    margin-left: 245px;
 }
 
-@media (max-width: 880px) { 
+@media (max-width: 900px) { 
     .profile__button-add { 
         width: 282px;
         position: relative;
         top: 23px;
+        margin-left: 0;
     } 
 } 

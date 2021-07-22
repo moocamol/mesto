@@ -4,11 +4,19 @@
     flex-wrap: wrap;
     gap: 20px 17px;
     padding: 0;
+    justify-content: space-evenly;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 879px) {
     .place {
-        justify-content: center;
+        /* justify-content: center; */
         gap: 22px;
+        max-width: 85%;
+    }
+}
+
+@media (max-width: 450px) {
+    .place {
+        max-width: 100%;
     }
 }

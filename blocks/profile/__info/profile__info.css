@@ -7,7 +7,7 @@
     align-self: center;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 900px) {
     .profile__info {
         margin-top: 24px;
         grid-template-columns: 1fr auto 1fr;

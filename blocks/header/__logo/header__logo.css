@@ -7,10 +7,10 @@
     
 } 
  
-@media (max-width: 880px) {
+@media (max-width: 500px) {
     .header__logo {
         width: 103px;
         height: 24px;
-        margin-left: 20px;
+        margin-left: 27px;
     }
 }
