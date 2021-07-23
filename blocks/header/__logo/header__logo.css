@@ -4,8 +4,12 @@
     background-image: url(../../../images/header_logo.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    
+    transition: .5s;
 } 
+
+.header__logo:hover {
+    opacity: .5;
+}
  
 @media (max-width: 500px) {
     .header__logo {

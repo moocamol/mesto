@@ -3,12 +3,14 @@
     max-width: 880px;
     width: 93%;
     position: relative;
-    margin-top: 36px;
+    margin-top: 67px;
     margin-bottom: 60px;
 } 
 
 @media (max-width: 879px) {
     .footer {
-        margin-top: 19px;
+        margin-top: 51px;
+        margin-bottom: 20px;
+        margin-left: 16px;
     } 
 } 

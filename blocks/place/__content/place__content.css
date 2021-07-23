@@ -1,10 +1,10 @@
 .place__content {
-    max-width: 246px;
-    min-height: 74px;
+    max-width: 241px;
     display: flex;
     flex-direction: row;
     align-self: center;
     align-items: baseline;
     justify-content: space-between;
     padding-left: 21px;
+    padding-bottom: 25px;
 }

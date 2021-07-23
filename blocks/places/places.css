@@ -1,7 +1,7 @@
 .places {
     display: flex;
     margin: 0;
-    padding-top: 37px;
+    padding-top: 54px;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
@@ -9,7 +9,7 @@
 
 @media (max-width: 879px) {
     .places {
-        padding-top: 47px;
+        padding-top: 38px;
     }
  }
 

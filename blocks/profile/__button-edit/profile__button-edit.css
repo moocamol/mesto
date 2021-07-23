@@ -4,8 +4,14 @@
    border: 1px solid #FFFFFF;
    margin: 0 0 10px 19px;
    background-image: url(../../../images/Pen.svg);
+   background-color: black;
    background-repeat: no-repeat;
    background-position: center;
+   transition: .5s;
+}
+
+.profile__button-edit:hover {
+   opacity: .6;
 }
 
 @media (max-width: 900px) { 
