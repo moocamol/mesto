@@ -22,7 +22,7 @@ function formSubmitHandler (evt) {
     evt.preventDefault();
     profileName.textContent = nameInput.value;
     profileProfession.textContent = professionInput.value;
-    togglePopup();
+    clickCloseButton();
 }
 
 popupButton.addEventListener("click", clickEditButton);

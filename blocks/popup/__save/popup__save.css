@@ -3,16 +3,17 @@
     font-size: 18px;
     line-height: 22px;
     color: white;
+    background-color: black;
     width: 83%;
     min-height: 50px;
     margin: 48px auto 37px;
-    border: 2px solid black;
+    border: none;
+    border-radius: 2px;
     transition: .5s;
 }
 
 .popup__save:hover {
     background-color: rgba(0,0,0,.8);
-    border-color: rgba(0,0,0,.8);
 }
 
 @media (max-width: 790px) { 
