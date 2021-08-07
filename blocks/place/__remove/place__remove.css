@@ -2,6 +2,7 @@
     background-image: url(../../../images/basket.svg);
     background-repeat: no-repeat;
     background-color: transparent;
+    cursor: pointer;
     border: none;
     width: 18px;
     height: 20px;
