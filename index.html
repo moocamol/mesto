@@ -26,48 +26,6 @@
 
     <section class="places">
       <ul class="place">
-        <li class="place__item">
-          <img src="./images/Karachaevsk.jpg" class="place__image" alt="Храм в горах.Карачаевск">
-          <div class="place__content">
-            <h2 class="place__title">Карачаевск</h2>
-            <button type="button"  class="place__like"></button>
-          </div>
-        </li>
-        <li class="place__item">
-          <img src="./images/Elbrus.jpg" class="place__image" alt="Гора Эльбрус на фоне заката :-)">
-          <div class="place__content">
-            <h2 class="place__title">Гора Эльбрус</h2>
-            <button type="button"  class="place__like"></button>
-          </div>
-        </li>
-        <li class="place__item">
-          <img src="./images/Dombay.jpg" class="place__image" alt="Домбай. Предположительно ущелье Домбай-Ульген. Но это не точно">
-          <div class="place__content">
-            <h2 class="place__title">Домбай</h2>
-            <button type="button"  class="place__like"></button>
-          </div>
-        </li>
-        <li class="place__item">
-          <img src="./images/Elbrus.jpg" class="place__image" alt="Гора Эльбрус">
-          <div class="place__content">
-            <h2 class="place__title">Гора Эльбрус</h2>
-            <button type="button"  class="place__like"></button>
-          </div>
-        </li>
-        <li class="place__item">
-          <img src="./images/Dombay.jpg" class="place__image" alt="Домбай. Ущелье. Осень">
-          <div class="place__content">
-            <h2 class="place__title">Домбай</h2>
-            <button type="button"  class="place__like"></button>
-          </div>
-        </li>
-        <li class="place__item">
-          <img src="./images/Karachaevsk.jpg" class="place__image" alt="Карачаевск. Былое величие">
-          <div class="place__content">
-            <h2 class="place__title">Карачаево-Черкессия</h2>
-            <button type="button"  class="place__like"></button>
-          </div>
-        </li>
       </ul>
     </section>
   </main>
@@ -76,17 +34,54 @@
     <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
   </footer>
 
-  <div class="popup">
+  <template id="place__template">
+    <li class="place__item">
+      <button type="button" class="place__remove"></button>
+      <img src="#" class="place__image" alt=''>
+      <div class="place__content">
+        <h2 class="place__title">...</h2>
+        <button type="button" class="place__like"></button>
+      </div>
+    </li>
+  </template>
+
+  <!--Попап: Редактировать профиль-->
+  <div class="popup" id="popup__profile">
     <div class="popup__content">
       <button type="button" aria-label="Close" class="popup__close"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
       <form class="popup__input-container" name="profile">
-        <input type="text" name="name" class="popup__input-item" placeholder="name">
-        <input type="text" name="profession" class="popup__input-item" placeholder="profession">
+        <input type="text" name="name" class="popup__input-item" placeholder="Имя">
+        <input type="text" name="profession" class="popup__input-item" placeholder="Профессия">
         <button class="button popup__save" type="submit">Сохранить</button>
       </form>
     </div>
   </div>
+
+  <!--Попап: Добавить новую карточку -->
+  <div class="popup" id="popup__new-place">
+    <div class="popup__content">
+      <button type="button" aria-label="Close" class="popup__close"></button>
+      <h2 class="popup__title">Новое место</h2>
+      <form class="popup__input-container" name="place">
+        <input type="text" name="place-name" class="popup__input-item" placeholder="Название">
+        <input type="url" name="url" class="popup__input-item" placeholder="Ссылка на картинку">
+        <button class="button popup__save" type="submit">Создать</button>
+      </form>
+    </div>
+  </div>
+
+  <!--Попап: Смотреть картинку -->
+  <div class="popup" id="popup__big-img">
+    <div class="popup__img">
+      <figure class="popup__figure">
+        <img class="popup__figure-img" src="#" alt="#">
+        <figcaption class="popup__figcaption">...</figcaption>
+      </figure>
+      <button type="button" aria-label="Close" class="popup__close"></button>
+    </div>
+  </div>
   <script src="./scripts/index.js"></script>
 </body>
+
 </html>

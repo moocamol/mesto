@@ -1,0 +1,17 @@
+.place__remove {
+    background-image: url(../../../images/basket.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    width: 18px;
+    height: 20px;
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    transition: .5s;
+    order: 2;
+}
+
+.place__remove:hover {
+    opacity: .5;
+}

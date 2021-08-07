@@ -1,6 +1,7 @@
 .place {
     list-style: none;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     flex-wrap: wrap;
     gap: 24px 17px;
     padding: 0;
@@ -10,14 +11,15 @@
 
 @media (max-width: 879px) {
     .place {
-        /* justify-content: center; */
         gap: 22px;
         max-width: 85%;
+        grid-template-columns: repeat(2, 282px);
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 635px) {
     .place {
+        grid-template-columns: none;
         max-width: 100%;
     }
 }

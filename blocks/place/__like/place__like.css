@@ -1,18 +1,15 @@
 .place__like {
     background-image: url(../../../images/Like.svg);
     background-repeat: no-repeat;
-    background-color: white;
+    background-color: transparent;
     border: none;
     width: 22px;
     height: 19px;
     transition: .5s;
-    /* padding-right: 5px; */
+    cursor: pointer;
 }
 
 .place__like:hover {
     opacity: .5;
 }
 
-/* .place__like:active {
-    background-color: black;
-} */
