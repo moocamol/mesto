@@ -5,14 +5,14 @@
     align-items: center;
     background: #FFFFFF;
     border-radius: 10px;
-    min-width: 430px;
+    width: 430px;
     box-sizing: border-box;
     position: relative;
 }
 
 @media (max-width: 879px) { 
     .popup__content { 
-        min-width: 282px;
+        width: 282px;
     } 
 }  
     

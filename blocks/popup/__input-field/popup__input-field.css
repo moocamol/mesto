@@ -1,0 +1,8 @@
+.popup__input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 9px;
+    width: 83%;
+}
+

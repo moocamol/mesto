@@ -22,10 +22,26 @@ const popupCapture = document.querySelector('.popup__figcaption');
 
 function openPopup(popup) {
     popup.classList.add('popup_is-opened');
+    checkValid(popup.querySelector('.popup__input-item'), validFormKeys)
 };
 
 function closePopup(popup) {
     popup.classList.remove('popup_is-opened');
+};
+
+function closePopupEsc(evt) {
+    if (evt.key === 'Escape') {
+        const openedPopup = document.querySelector('.popup_is-opened');
+        if (openedPopup) {
+            closePopup(openedPopup);
+        }
+    }
+};
+
+function closePopupOverlay(evt) {
+    if (evt.target === evt.currentTarget) {
+        closePopup(evt.currentTarget);
+    }
 };
 
 function hendleUserSubmit(evt) {
@@ -75,9 +91,15 @@ popupButtonEdit.addEventListener('click', () => {
     professionInput.value = profileProfession.textContent;
     openPopup(popupProfile)
 });
+
 popupButtonAdd.addEventListener('click', () => openPopup(popupNewPlace));
 
 profileForm.addEventListener('submit', hendleUserSubmit);
+
+document.addEventListener('keydown', closePopupEsc);
+popupProfile.addEventListener('click', closePopupOverlay);
+popupNewPlace.addEventListener('click', closePopupOverlay);
+popupBigImage.addEventListener('click', closePopupOverlay);
 
 closeButtons.forEach(closeButton => {
     const popup = closeButton.closest('.popup');
@@ -98,5 +120,3 @@ initialCards.reverse().forEach(place => {
         createPlace(place.name, place.link, place.alt)
     );
 });
-
-
