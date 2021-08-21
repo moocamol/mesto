@@ -22,7 +22,7 @@ const popupCapture = document.querySelector('.popup__figcaption');
 
 function openPopup(popup) {
     popup.classList.add('popup_is-opened');
-    checkValid(popup.querySelector('.popup__input-item'), validFormKeys)
+    toggleButtonState(popup.querySelector(validFormKeys.formSelector), validFormKeys)
 };
 
 function closePopup(popup) {
