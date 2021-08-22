@@ -37,15 +37,14 @@ function checkInputValidity(inputElement, formKeys) {
     }
 };
 
-const toggleButtonState = (formElement, formKeys) => {
+const toggleButtonState = (formElement, formKeys) => {  
     const buttonElement = formElement.querySelector(formKeys.submitButtonSelector)
-    console.log(buttonElement)
     if (hasValid(formElement, formKeys)) {
         buttonElement.classList.remove(formKeys.inactiveButtonClass);
-        buttonElement.setAttribute('disabled', true);
+        buttonElement.removeAttribute('disabled');
     } else {
         buttonElement.classList.add(formKeys.inactiveButtonClass);
-        buttonElement.removeAttribute('disabled');
+        buttonElement.setAttribute('disabled', true);
     }
 };
 

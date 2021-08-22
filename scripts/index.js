@@ -22,7 +22,9 @@ const popupCapture = document.querySelector('.popup__figcaption');
 
 function openPopup(popup) {
     popup.classList.add('popup_is-opened');
-    toggleButtonState(popup.querySelector(validFormKeys.formSelector), validFormKeys)
+    if (popup.querySelector(validFormKeys.formSelector)) {
+        toggleButtonState(popup.querySelector(validFormKeys.formSelector), validFormKeys)
+    }
 };
 
 function closePopup(popup) {
@@ -89,6 +91,10 @@ function addNewPlace(newPlace) {
 popupButtonEdit.addEventListener('click', () => {
     nameInput.value = profileName.textContent;
     professionInput.value = profileProfession.textContent;
+
+    checkValid(nameInput, validFormKeys)
+    checkValid(professionInput, validFormKeys)
+
     openPopup(popupProfile)
 });
 
