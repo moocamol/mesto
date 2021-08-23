@@ -56,7 +56,7 @@ function checkValid(element, formKeys) {
 
 
 function enableValidation(formKeys) {
-    document.querySelectorAll('.popup__input-container').forEach(form => {
+       document.querySelectorAll(formKeys.formSelector).forEach(form => {
         form.addEventListener('input', evt => {
             checkValid(evt.target, formKeys )
         });

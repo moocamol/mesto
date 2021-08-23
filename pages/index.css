@@ -46,6 +46,7 @@
 @import url(../blocks/popup/__figure/popup__figure.css);
 @import url(../blocks/popup/__figure-img/popup__figure-img.css);
 @import url(../blocks/popup/__figcaption/popup__figcaption.css);
+@import url(../blocks/popup/_display-none/popup_display-none.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css); 

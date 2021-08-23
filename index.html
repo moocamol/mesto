@@ -46,7 +46,7 @@
   </template>
 
   <!--Попап: Редактировать профиль-->
-  <div class="popup popup_type_profile">
+  <div class="popup popup_type_profile popup_display-none">
     <div class="popup__content">
       <button type="button" aria-label="Close" class="popup__close"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
@@ -65,7 +65,7 @@
   </div>
 
   <!--Попап: Добавить новую карточку -->
-  <div class="popup popup_type_new-place">
+  <div class="popup popup_type_new-place popup_display-none">
     <div class="popup__content">
       <button type="button" aria-label="Close" class="popup__close"></button>
       <h2 class="popup__title">Новое место</h2>
@@ -75,7 +75,7 @@
           <span class="popup__input-error"></span>
         </label>
         <label class="popup__input-field">
-          <input type="url" name="url" class="popup__input-item" placeholder="Ссылка на картинку"  autocomplete="off">
+          <input type="url" name="url" class="popup__input-item" placeholder="Ссылка на картинку" required autocomplete="off">
           <span class="popup__input-error"></span>
         </label>
         <button class="button popup__save" type="submit">Создать</button>
@@ -84,7 +84,7 @@
   </div>
 
   <!--Попап: Смотреть картинку -->
-  <div class="popup popup_type_big-img">
+  <div class="popup popup_type_big-img popup_display-none">
     <div class="popup__img">
       <figure class="popup__figure">
         <img class="popup__figure-img" src="#" alt="#">

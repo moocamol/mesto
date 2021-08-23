@@ -1,6 +1,7 @@
+const popups = document.querySelectorAll('.popup')
+
 const popupButtonEdit = document.querySelector('.profile__button-edit');
 const popupButtonAdd = document.querySelector('.profile__button-add');
-const closeButtons = document.querySelectorAll('.popup__close');
 
 const popupProfile = document.querySelector('.popup_type_profile');
 const profileName = document.querySelector('.profile__name');
@@ -20,15 +21,23 @@ const popupBigImage = document.querySelector('.popup_type_big-img')
 const popupBigImgFigure = document.querySelector('.popup__figure-img');
 const popupCapture = document.querySelector('.popup__figcaption');
 
+document.addEventListener("DOMContentLoaded", () => {
+    popups.forEach(popup => {
+        setTimeout(() => {
+            popup.classList.remove('popup_display-none')
+        },
+        1000)
+    })
+});
+
 function openPopup(popup) {
     popup.classList.add('popup_is-opened');
-    if (popup.querySelector(validFormKeys.formSelector)) {
-        toggleButtonState(popup.querySelector(validFormKeys.formSelector), validFormKeys)
-    }
+    document.addEventListener('keydown', closePopupEsc); //Добавили слушателя
 };
 
 function closePopup(popup) {
     popup.classList.remove('popup_is-opened');
+    document.removeEventListener('keydown', closePopupEsc); //Удаляем слушателя 
 };
 
 function closePopupEsc(evt) {
@@ -40,11 +49,16 @@ function closePopupEsc(evt) {
     }
 };
 
-function closePopupOverlay(evt) {
-    if (evt.target === evt.currentTarget) {
-        closePopup(evt.currentTarget);
-    }
-};
+popups.forEach((popup) => {                                     
+    popup.addEventListener('click', (evt) => {                   
+        if (evt.target.classList.contains('popup_is-opened')) {     
+            closePopup(popup)                                    
+        }                                                        
+        if (evt.target.classList.contains('popup__close')) {     
+          closePopup(popup)                                      
+        }
+    })
+})
 
 function hendleUserSubmit(evt) {
     evt.preventDefault();
@@ -79,14 +93,13 @@ function createPlace(name, link, alt) {
     return newPlace
 };
 
-function addNewPlace(newPlace) {
-    const firstPlaceItem = document.querySelector('.place__item');
-    if (!firstPlaceItem) {
-        placeList.append(newPlace);
+function addNewPlace(newPlace, toStart=false) {
+    if (toStart ) {
+        placeList.prepend(newPlace);
     } else {
-        firstPlaceItem.before(newPlace);
+        placeList.append(newPlace);
     };
-}
+};
 
 popupButtonEdit.addEventListener('click', () => {
     nameInput.value = profileName.textContent;
@@ -98,31 +111,24 @@ popupButtonEdit.addEventListener('click', () => {
     openPopup(popupProfile)
 });
 
-popupButtonAdd.addEventListener('click', () => openPopup(popupNewPlace));
+popupButtonAdd.addEventListener('click', () => {
+    openPopup(popupNewPlace)
+    toggleButtonState(placeForm, validFormKeys)
+});
 
 profileForm.addEventListener('submit', hendleUserSubmit);
-
-document.addEventListener('keydown', closePopupEsc);
-popupProfile.addEventListener('click', closePopupOverlay);
-popupNewPlace.addEventListener('click', closePopupOverlay);
-popupBigImage.addEventListener('click', closePopupOverlay);
-
-closeButtons.forEach(closeButton => {
-    const popup = closeButton.closest('.popup');
-    closeButton.addEventListener('click', () => closePopup(popup));
-});
 
 placeForm.addEventListener('submit', (evt) => {
     evt.preventDefault();
     closePopup(popupNewPlace);
     addNewPlace(
-        createPlace(placeNameInput.value, placeUrlInput.value)
+        createPlace(placeNameInput.value, placeUrlInput.value), 'true'
     );
     placeForm.reset();
 });
 
-initialCards.reverse().forEach(place => {
-    addNewPlace(
+initialCards.forEach(place => {    
+        addNewPlace(
         createPlace(place.name, place.link, place.alt)
     );
 });
