@@ -68,10 +68,9 @@ function hendleUserSubmit(evt) {
     closePopup(popupProfile);
 };
 
-
-
 function createPlace(name, link) {
-    const newPlace = new Card(name, link, 'place__template')
+    const newPlace = new Card({name: name, link: link}, 'place__template')
+
     return newPlace.getElement()
 };
 
@@ -96,7 +95,7 @@ popupButtonEdit.addEventListener('click', () => {
 
 popupButtonAdd.addEventListener('click', () => {
     openPopup(popupNewPlace)
-    placeFormValidator.toggleButtonState(placeForm, validFormKeys)
+    placeFormValidator.toggleButtonState()
 });
 
 profileForm.addEventListener('submit', hendleUserSubmit);
@@ -112,7 +111,7 @@ placeForm.addEventListener('submit', (evt) => {
 
 initialCards.forEach(place => {    
         addNewPlace(
-        createPlace(place.name, place.link, place.alt)
+        createPlace(place.name, place.link)
     );
 });
 

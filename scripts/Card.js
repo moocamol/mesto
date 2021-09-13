@@ -5,14 +5,12 @@ const popupBigImgFigure = document.querySelector('.popup__figure-img');
 const popupCapture = document.querySelector('.popup__figcaption');
 
 export class Card {
-    constructor(name, link, template) {
-        this.name = name;
-        this.link = link;
+    constructor(data, template) {
+        this.name = data.name;
+        this.link = data.link;
 
         this.element = this._createCard(template)
-        this._removeListener()
-        this._likeListener()
-        this._zoomListener()
+        this._setEventListeners()
     }
 
     getElement() {
@@ -26,37 +24,39 @@ export class Card {
             .firstElementChild
             .cloneNode(true);
 
-        element.querySelector('.place__title').innerText = this.name;
-        element.querySelector('.place__image').src = this.link;
-        element.querySelector('.place__image').alt = this.name;
+        this._titleElement = element.querySelector('.place__title');
+        this._imageElement = element.querySelector('.place__image');
+        this._likeButton = element.querySelector('.place__like');
+        this._deleteButton = element.querySelector('.place__remove');
+
+        this._titleElement.innerText = this.name;
+        this._imageElement.src = this.link;
+        this._imageElement.alt = this.name;
 
         return element
     }
 
-    _removeListener() {
-
-        const _remove = () => {
-            this.element.remove()
-        }
-
-        this.element.querySelector('.place__remove').addEventListener('click', _remove);
+    _setEventListeners() {
+        this._deleteButton.addEventListener('click', () => this._remove());
+        this._likeButton.addEventListener('click', (evt) => this._like(evt));
+        this._imageElement.addEventListener('click', () => this._openBigImgPopup());
     }
 
-    _likeListener() {
-        this.element.querySelector('.place__like').addEventListener('click', evt => {
-            evt.target.classList.toggle('place__like_active');
-        });
+    _remove() {
+        this.element.remove()
     }
 
-    _zoomListener() {
-        const _openBigImgPopup = () => {
-            popupBigImgFigure.alt = this.name;
-            popupBigImgFigure.src = this.link;
-            popupCapture.textContent = this.name;
-            openPopup(popupBigImage);
-        };
 
-        this.element.querySelector('.place__image').addEventListener('click', _openBigImgPopup);
+    _like(evt) {
+        evt.target.classList.toggle('place__like_active');
+    }
+
+    _openBigImgPopup() {
+
+        popupBigImgFigure.alt = this.name;
+        popupBigImgFigure.src = this.link;
+        popupCapture.textContent = this.name;
+        openPopup(popupBigImage);
     }
 }
 
