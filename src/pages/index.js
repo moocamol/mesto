@@ -1,7 +1,9 @@
-import { Card } from "./Card.js";
-import { initialCards } from "./initial-сards.js";
-import { validFormKeys } from "./validFormKeys.js";
-import { FormValidator } from "./FormValidator.js";
+import '../pages/index.css';
+
+import { Card } from "../scripts/Card.js";
+import { initialCards } from "../scripts/initial-сards.js";
+import { validFormKeys } from "../scripts/validFormKeys.js";
+import { FormValidator } from "../scripts/FormValidator.js";
 
 const popups = document.querySelectorAll('.popup')
 
